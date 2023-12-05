@@ -1,0 +1,39 @@
+
+version: 2
+
+models:
+  - name: users_model
+    description: "user model"
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        tests:
+          - not_null
+
+  - name: products_model
+    description: "products model"
+    columns:
+      - name: product_id
+        description: "The primary key for this table"
+        tests:
+          - not_null   
+
+  - name: purchases_model
+    description: "purchases model"
+    columns:
+      - name: purchase_id
+        description: "The primary key for this table"
+        tests:
+          - not_null             
+
+  - name: user_purchases_model
+    description: "user purchases"
+    columns:
+      - name: username
+        description: "username"
+        tests:
+          - not_null
+      - name: user_id
+        description: "foreign key"
+        tests:
+          - not_null    
